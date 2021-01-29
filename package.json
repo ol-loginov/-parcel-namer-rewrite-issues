@@ -1,0 +1,45 @@
+{
+  "name": "parcel-namer-rewrite-1",
+  "engines": {
+    "node": "14"
+  },
+  "isLibrary": false,
+  "targets": {
+    "legacy": {
+      "engines": {
+        "browsers": [
+          ">= 0.25%",
+          "maintained node versions"
+        ]
+      },
+      "isLibrary": false,
+      "minify": false
+    },
+    "modern": {
+      "engines": {
+        "browsers": [
+          "defaults",
+          "not IE 11",
+          "maintained node versions"
+        ]
+      },
+      "isLibrary": false,
+      "minify": false
+    }
+  },
+  "parcel-namer-rewrite": {
+    "rules": {
+      "styles(.*).css": "styles.css"
+    }
+  },
+  "scripts": {
+    "serve": "parcel serve templates/layouts/index.pug",
+    "build": "parcel build templates/layouts/index.pug --dist-dir ./build"
+  },
+  "devDependencies": {
+    "parcel": "^2.0.0-beta.1",
+    "parcel-namer-rewrite": "^2.0.0-beta.1-6",
+    "pug": "^3.0.0",
+    "sass": "^1.32.5"
+  }
+}
