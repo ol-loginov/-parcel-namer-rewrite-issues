@@ -1,45 +1,20 @@
 {
-  "name": "parcel-namer-rewrite-1",
-  "engines": {
-    "node": "14"
-  },
-  "isLibrary": false,
-  "targets": {
-    "legacy": {
-      "engines": {
-        "browsers": [
-          ">= 0.25%",
-          "maintained node versions"
-        ]
-      },
-      "isLibrary": false,
-      "minify": false
-    },
-    "modern": {
-      "engines": {
-        "browsers": [
-          "defaults",
-          "not IE 11",
-          "maintained node versions"
-        ]
-      },
-      "isLibrary": false,
-      "minify": false
-    }
-  },
+  "name": "parcel-namer-rewrite-5",
+  "source": "src/index.html",
   "parcel-namer-rewrite": {
+    "chain": "@parcel/namer-default",
     "rules": {
-      "styles(.*).css": "styles.css"
+      "(.*).css": "assets-rewrite/css/$1{.hash}.css",
+      "(.*).js": "assets-rewrite/js/$1{.hash}.js",
+      "(.*).(jpg|png|gif|svg|webp|avif)": "assets/img1/$1.$2"
     }
   },
   "scripts": {
-    "serve": "parcel serve templates/layouts/index.pug",
-    "build": "parcel build templates/layouts/index.pug --dist-dir ./build"
+    "build": "parcel build --dist-dir build src/index.html"
   },
   "devDependencies": {
-    "parcel": "^2.0.0-beta.1",
-    "parcel-namer-rewrite": "^2.0.0-beta.1-6",
-    "pug": "^3.0.0",
-    "sass": "^1.32.5"
+    "@parcel/transformer-image": "^2.0.0-rc.0",
+    "parcel": "^2.0.0-rc.0",
+    "parcel-namer-rewrite": "2.0.0-rc.0"
   }
 }
