@@ -1,6 +1,6 @@
 {
-  "name": "parcel-namer-rewrite-5",
-  "source": "src/index.html",
+  "name": "parcel-namer-rewrite-issues-10",
+  "packageManager": "yarn@3.2.0",
   "parcel-namer-rewrite": {
     "chain": "@parcel/namer-default",
     "rules": {
@@ -10,11 +10,47 @@
     }
   },
   "scripts": {
-    "build": "parcel build --dist-dir build src/index.html"
+    "dev": "parcel src/**/*.html --open",
+    "build": "parcel build --no-source-maps --no-content-hash",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "targets": {
+    "default": {
+      "source": [
+        "src/index.html",
+        "src/404.html"
+      ]
+    }
   },
   "devDependencies": {
-    "@parcel/transformer-image": "^2.0.0-rc.0",
-    "parcel": "^2.0.0-rc.0",
-    "parcel-namer-rewrite": "2.0.0-rc.0"
+    "@parcel/bundler-default": "^2.5.0",
+    "@parcel/compressor-raw": "^2.5.0",
+    "@parcel/config-default": "^2.5.0",
+    "@parcel/core": "^2.5.0",
+    "@parcel/namer-default": "^2.5.0",
+    "@parcel/optimizer-css": "^2.5.0",
+    "@parcel/optimizer-htmlnano": "^2.5.0",
+    "@parcel/optimizer-image": "^2.5.0",
+    "@parcel/optimizer-terser": "^2.5.0",
+    "@parcel/packager-css": "^2.5.0",
+    "@parcel/packager-html": "^2.5.0",
+    "@parcel/packager-js": "^2.5.0",
+    "@parcel/packager-raw": "^2.5.0",
+    "@parcel/resolver-default": "^2.5.0",
+    "@parcel/runtime-browser-hmr": "^2.5.0",
+    "@parcel/runtime-js": "^2.5.0",
+    "@parcel/runtime-react-refresh": "^2.5.0",
+    "@parcel/runtime-service-worker": "^2.5.0",
+    "@parcel/transformer-babel": "^2.5.0",
+    "@parcel/transformer-css": "^2.5.0",
+    "@parcel/transformer-html": "^2.5.0",
+    "@parcel/transformer-image": "^2.5.0",
+    "@parcel/transformer-js": "^2.5.0",
+    "@parcel/transformer-postcss": "^2.5.0",
+    "@parcel/transformer-posthtml": "^2.5.0",
+    "@parcel/transformer-react-refresh-wrap": "^2.5.0",
+    "@parcel/utils": "^2.5.0",
+    "parcel": "^2.5.0",
+    "parcel-namer-rewrite": "^2.0.0-rc.2"
   }
 }
