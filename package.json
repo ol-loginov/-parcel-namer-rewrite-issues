@@ -1,10 +1,9 @@
 {
   "name": "parcel-namer-rewrite-issues-12",
-
   "parcel-namer-rewrite": {
     "chain": "@parcel/namer-default",
     "rules": {
-      "assets/js/myscript.js": "myrewrite/js/myscript.js",
+      "assets/js/standalone.js": "myrewrite/js/standalone.js",
       "(.*).css": "assets-rewrite/css/$1{.hash}.css",
       "(.*).js": "assets-rewrite/js/$1{.hash}.js",
       "(.*).(jpg|png|gif|svg|webp|avif)": "assets/img1/$1.$2"
@@ -12,14 +11,14 @@
   },
   "scripts": {
     "dev": "parcel src/**/*.html --open",
-    "build": "parcel build --no-source-maps --no-content-hash",
+    "build": "parcel build --no-source-maps --no-content-hash --no-cache",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "targets": {
     "default": {
       "source": [
-        "src/404.html",
-        "assets/js/myscript.js"
+        "src/page.html",
+        "assets/js/standalone.js"
       ]
     }
   },
