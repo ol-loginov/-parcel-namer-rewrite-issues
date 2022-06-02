@@ -1,9 +1,10 @@
 {
-  "name": "parcel-namer-rewrite-issues-10",
-  "packageManager": "yarn@3.2.0",
+  "name": "parcel-namer-rewrite-issues-12",
+
   "parcel-namer-rewrite": {
     "chain": "@parcel/namer-default",
     "rules": {
+      "assets/js/myscript.js": "myrewrite/js/myscript.js",
       "(.*).css": "assets-rewrite/css/$1{.hash}.css",
       "(.*).js": "assets-rewrite/js/$1{.hash}.js",
       "(.*).(jpg|png|gif|svg|webp|avif)": "assets/img1/$1.$2"
@@ -17,8 +18,8 @@
   "targets": {
     "default": {
       "source": [
-        "src/index.html",
-        "src/404.html"
+        "src/404.html",
+        "assets/js/myscript.js"
       ]
     }
   },
