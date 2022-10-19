@@ -52,6 +52,6 @@
     "@parcel/transformer-react-refresh-wrap": "^2.5.0",
     "@parcel/utils": "^2.5.0",
     "parcel": "^2.5.0",
-    "parcel-namer-rewrite": "file:../parcel-namer-rewrite"
+    "parcel-namer-rewrite": "^2.0.0-rc.3"
   }
 }
