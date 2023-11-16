@@ -3,12 +3,22 @@
   "parcel-namer-rewrite": {
     "hashing": "never"
   },
+  "parcel-reporter-entries": {
+    "file": "dist/application-bundle.yml",
+    "yml-write": "map",
+    "yml-parent": "app/bundle",
+    "from-prefix": "[",
+    "from-suffix": "]"
+  },
   "scripts": {
     "build": "parcel build --no-cache"
   },
   "targets": {
     "default": {
+      "distDir": "dist/site/static/bundle",
+      "publicUrl": "/site/",
       "source": [
+        "assets/css/test.css",
         "src/page.html",
         "assets/js/standalone.js"
       ]
@@ -41,8 +51,10 @@
     "@parcel/transformer-postcss": "^2.10.3",
     "@parcel/transformer-posthtml": "^2.10.3",
     "@parcel/transformer-react-refresh-wrap": "^2.10.3",
+    "@parcel/types": "^2.10.3",
     "@parcel/utils": "^2.10.3",
     "parcel": "^2.10.3",
-    "parcel-namer-rewrite": "../parcel-namer-rewrite"
+    "parcel-namer-rewrite": "../parcel-namer-rewrite",
+    "parcel-reporter-entries": "../parcel-reporter-entries"
   }
 }
