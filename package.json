@@ -4,6 +4,7 @@
     "hashing": "never"
   },
   "parcel-reporter-entries": {
+    "assetRoot": "src",
     "file": "dist/application-bundle.yml",
     "yml-write": "map",
     "yml-parent": "app/bundle",
